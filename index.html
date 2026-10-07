@@ -11,9 +11,9 @@
   <title>Frontend Mentor | Contact form</title>
 
   <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
 
 </head>
-
 
 <body>
 
@@ -22,25 +22,26 @@
     <p>Thanks for completing the form. We'll be in touch soon!</p>
   </div>
 
-
   <div class="contact-form">
     <h1>Contact Us</h1>
 
-    <form>
+    <form id="contact-form">
       <div class="form-group">
-        <label for="first-name">First Name</label>
+        <label for="first-name">First Name <span class="required">*</span></label>
         <input type="text" id="first-name" required>
         <span class="error-message">This field is required</span>
       </div>
+
       <div class="form-group">
-        <label for="last-name">Last Name</label>
+        <label for="last-name">Last Name <span class="required">*</span></label>
         <input type="text" id="last-name" required>
         <span class="error-message">This field is required</span>
       </div>
+
       <div class="form-group">
-        <label for="email">Email Address</label>
+        <label for="email">Email Address <span class="required">*</span></label>
         <input type="email" id="email" required>
-        <span class="error-message">This field is required</span>
+        <span class="error-message">Please enter a valid email address</span>
       </div>
 
       <div class="form-group">
@@ -60,19 +61,20 @@
         <span class="error-message">Please select a query type</span>
       </div>
 
+      <div class="form-group">
+        <label for="message">Message <span class="required">*</span></label>
+        <textarea id="message" required></textarea>
+        <span class="error-message">This field is required</span>
+      </div>
 
-  <div class="form-group">
-    <label for="message">Message</label>
-    <textarea id="message" required></textarea>
-    <span class="error-message">This field is required</span>
-  </div>
-  <div class="form-group">
-    <input type="checkbox" id="consent" required>
-    <label for="consent">I consent to being contacted by the team</label>
-    <span class="error-message">This field is required</span>
-  </div>
-  <button type="submit">Submit</button>
-  </form>
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="consent" required>
+        <label for="consent">I consent to being contacted by the team <span class="required">*</span></label>
+        <span class="error-message">To submit this form, please consent to being contacted</span>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
   </div>
 </body>
 
